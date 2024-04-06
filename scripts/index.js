@@ -10,7 +10,6 @@
 
 const cardList = document.querySelector(".places__list");
 const template = document.querySelector("#card-template").content;
-let place1;
 const cards = initialCards.map(function (item) {
   return {
     name: item.name,
