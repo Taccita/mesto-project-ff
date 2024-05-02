@@ -14,7 +14,7 @@
     <div class="page__content">
       <header class="header page__section">
         <img
-          src="./images/logo.svg"
+          src="<%=require('./images/logo.svg')%>"
           alt="Логотип проекта масто"
           class="logo header__logo"
         />
@@ -23,14 +23,13 @@
         <section class="profile page__section">
           <div
             class="profile__image"
-            style="background-image: url('./images/avatar.jpg')"
           ></div>
           <div class="profile__info">
             <h1 class="profile__title">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button" type="button"></button>
+            <button class="profile__edit-button bt" type="button"></button>
             <p class="profile__description">Исследователь океана</p>
           </div>
-          <button class="profile__add-button" type="button"></button>
+          <button class="profile__add-button bt" type="button"></button>
         </section>
         <section class="places page__section">
           <ul class="places__list"></ul>
@@ -54,7 +53,7 @@
             <input
               type="text"
               name="description"
-              class="popup__input popup__input_type_description"
+              class="popup__input popup__input_type_description" 
               placeholder="Занятие"
               required
             />
@@ -68,7 +67,7 @@
         <div class="popup__content">
           <button type="button" class="popup__close"></button>
           <h3 class="popup__title">Новое место</h3>
-          <form class="popup__form" name="new-place">
+          <form class="popup__form-place" name="new-place">
             <input
               type="text"
               name="place-name"
@@ -91,15 +90,14 @@
       </div>
       <div class="popup popup_type_image">
         <div class="popup__content popup__content_content_image">
-          <button type="button" class="popup__close"></button>
+          <button type="button" class="popup__close image-close"></button>
           <img src="" alt="" class="popup__image" />
           <p class="popup__caption"></p>
         </div>
       </div>
     </div>
-    <script src="./scripts/cards.js"></script>
+    <script  src="./scripts/cards.js"></script>
     <script src="./scripts/index.js" defer></script>
-
     <template id="card-template">
       <li class="places__item card">
         <img class="card__image" src="" alt="" />
